@@ -1,0 +1,19 @@
+current directory: /Users/mohamedakmal/Documents/machineTest/BornovPerformace-image-processor/ImageProcessor/vendor/bundle/ruby/3.3.0/gems/erb-6.0.2/ext/erb/escape
+/Users/mohamedakmal/.rbenv/versions/3.3.0/bin/ruby extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: /Users/mohamedakmal/Documents/machineTest/BornovPerformace-image-processor/ImageProcessor/vendor/bundle/ruby/3.3.0/gems/erb-6.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260330-14080-5j4j37 sitelibdir\=./.gem.20260330-14080-5j4j37 clean
+
+current directory: /Users/mohamedakmal/Documents/machineTest/BornovPerformace-image-processor/ImageProcessor/vendor/bundle/ruby/3.3.0/gems/erb-6.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260330-14080-5j4j37 sitelibdir\=./.gem.20260330-14080-5j4j37
+compiling escape.c
+linking shared-object erb/escape.bundle
+
+current directory: /Users/mohamedakmal/Documents/machineTest/BornovPerformace-image-processor/ImageProcessor/vendor/bundle/ruby/3.3.0/gems/erb-6.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260330-14080-5j4j37 sitelibdir\=./.gem.20260330-14080-5j4j37 install
+/usr/bin/install -c -m 0755 escape.bundle ./.gem.20260330-14080-5j4j37/erb
+
+current directory: /Users/mohamedakmal/Documents/machineTest/BornovPerformace-image-processor/ImageProcessor/vendor/bundle/ruby/3.3.0/gems/erb-6.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260330-14080-5j4j37 sitelibdir\=./.gem.20260330-14080-5j4j37 clean

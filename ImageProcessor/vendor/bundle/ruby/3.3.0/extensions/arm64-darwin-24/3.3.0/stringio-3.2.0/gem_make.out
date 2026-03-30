@@ -1,0 +1,19 @@
+current directory: /Users/mohamedakmal/Documents/machineTest/BornovPerformace-image-processor/ImageProcessor/vendor/bundle/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+/Users/mohamedakmal/.rbenv/versions/3.3.0/bin/ruby extconf.rb
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /Users/mohamedakmal/Documents/machineTest/BornovPerformace-image-processor/ImageProcessor/vendor/bundle/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260330-14080-5t65pv sitelibdir\=./.gem.20260330-14080-5t65pv clean
+
+current directory: /Users/mohamedakmal/Documents/machineTest/BornovPerformace-image-processor/ImageProcessor/vendor/bundle/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260330-14080-5t65pv sitelibdir\=./.gem.20260330-14080-5t65pv
+compiling stringio.c
+linking shared-object stringio.bundle
+
+current directory: /Users/mohamedakmal/Documents/machineTest/BornovPerformace-image-processor/ImageProcessor/vendor/bundle/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260330-14080-5t65pv sitelibdir\=./.gem.20260330-14080-5t65pv install
+/usr/bin/install -c -m 0755 stringio.bundle ./.gem.20260330-14080-5t65pv
+
+current directory: /Users/mohamedakmal/Documents/machineTest/BornovPerformace-image-processor/ImageProcessor/vendor/bundle/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260330-14080-5t65pv sitelibdir\=./.gem.20260330-14080-5t65pv clean
