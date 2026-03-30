@@ -11,8 +11,8 @@ const Header: React.FC = () => {
           <View style={styles.logoDotSmall} />
         </View>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>ImageProcessor</Text>
-          <Text style={styles.subtitle}>High-Performance Native Engine</Text>
+          <Text style={styles.title}>Bronov</Text>
+          <Text style={styles.subtitle}>High-Performance Image Processor</Text>
         </View>
       </View>
     </View>
