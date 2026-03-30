@@ -38,23 +38,6 @@ The app automatically detects the user's location and performs **reverse geocodi
 - **Image Handling**: react-native-image-picker for seamless gallery access.
 - **Location**: @react-native-community/geolocation for precise GPS data.
 
----
-
-## 📂 Project Structure
-
-```text
-src/
-├── components/          # Modular, reusable UI elements
-│   ├── ImageEditor.tsx  # Core engine (Skia Canvas + Filters)
-│   ├── LocationCard.tsx # Location data and geocoding logic
-│   └── ...
-├── hooks/               # Custom hooks (e.g., locationHook.ts)
-├── theme/               # Design tokens (Colors, Typography, Spacing)
-└── utils/               # Helper functions and business logic
-```
-
----
-
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
