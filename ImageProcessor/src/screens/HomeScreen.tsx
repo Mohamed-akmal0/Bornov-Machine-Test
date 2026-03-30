@@ -3,8 +3,7 @@ import {View, ScrollView, StyleSheet, StatusBar} from 'react-native';
 import {Colors, Spacing} from '../theme';
 import {
   Header,
-  ImagePreview,
-  FilterSelector,
+  ImageEditor,
   LocationCard,
   ActionButton,
   ProcessingStatus,
@@ -21,14 +20,13 @@ const HomeScreen: React.FC = () => {
   //image fetch function
   const fetchImageFromGallery = async () => {
     const options: ImageLibraryOptions = {
-      mediaType: 'photo', // Restricts to images
+      mediaType: 'photo', // to fetch only images
       quality: 0.9,
       maxWidth: 2000,
       maxHeight: 2000,
       includeBase64: false,
     };
     const result = await launchImageLibrary(options);
-    console.log('result', result.assets[0].uri);
     setImage(result.assets[0].uri);
   };
 
@@ -39,15 +37,16 @@ const HomeScreen: React.FC = () => {
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}>
+        showsVerticalScrollIndicator={false}
+        bounces={false}>
         {/* Header */}
         <Header />
 
-        {/* Image Preview Area */}
-        <ImagePreview imageUri={image} processedImageUri={null} />
+        {/* Location & Language Card */}
+        <LocationCard />
 
-        {/* Filter Selector */}
-        <FilterSelector selectedFilter="grayscale" />
+        {/* Image Editor (Preview + Filters combined) */}
+        <ImageEditor imageUri={image} />
 
         {/* Processing Status - shown after filter is applied */}
         <ProcessingStatus
@@ -56,10 +55,7 @@ const HomeScreen: React.FC = () => {
           processingTime={null}
         />
 
-        {/* Location & Language Card */}
-        <LocationCard />
-
-        {/* Action Buttons */}
+        {/* Action Button */}
         <View style={styles.buttonSection}>
           <ActionButton
             title="Pick Image"
@@ -68,20 +64,6 @@ const HomeScreen: React.FC = () => {
             variant="primary"
             onPress={fetchImageFromGallery}
           />
-
-          <View style={styles.buttonSpacer} />
-
-          <ActionButton
-            title="Apply Filter"
-            subtitle="Process via native bridge"
-            icon="✨"
-            variant="secondary"
-            disabled
-          />
-
-          <View style={styles.buttonSpacer} />
-
-          <ActionButton title="Reset" icon="↻" variant="outline" />
         </View>
 
         {/* Bottom Spacer */}

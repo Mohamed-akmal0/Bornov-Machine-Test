@@ -1,79 +1,81 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# ImageProcessor — High-Performance Native Image Editor
 
-# Getting Started
+A premium React Native mobile application built for high-performance image filtering and intelligent location-based contextualization. This project was developed as a technical machine test submission, focusing on **native engine performance**, **modular architecture**, and **premium user experience**.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+---
 
-## Step 1: Start the Metro Server
+## 🚀 Key Features
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+### 1. High-Performance Live Filtering (Native Skia Engine)
+Instead of processing images on the JavaScript thread (which can be slow and laggy), this app utilizes the **@shopify/react-native-skia** native engine. 
+- Filters are rendered directly on the GPU for instant, lag-free previews.
+- **Filters included**: Original, Grayscale, Blur, and Sepia.
+- **Technical Excellence**: Implemented a stable "Underlay Rendering Strategy" to overcome common JSI/Hermes thread conflicts when transitioning between standard Image and Skia Canvas components.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### 2. Intelligent Contextual Location Awareness
+The app automatically detects the user's location and performs **reverse geocoding** (via OpenStreetMap/Nominatim) to provide a descriptive title for the image.
+- Dynamically translates raw coordinates into human-readable city/country names.
+- Contextual image titles that update based on geographic data.
 
-```bash
-# using npm
-npm start
+### 3. Premium Design System
+- **Rich Aesthetics**: A dark-mode first design with a violet-to-cyan color palette.
+- **Glassmorphism**: Translucent UI elements with background blur for a high-end, premium feel.
+- **Micro-animations**: Smooth transitions and interactive filter chips for an engaging user experience.
 
-# OR using Yarn
-yarn start
+---
+
+## 🛠️ Tech Stack & Architecture
+
+- **Core**: React Native (0.73.6) with TypeScript.
+- **Engine**: @shopify/react-native-skia (for GPU-accelerated graphics).
+- **Navigation**: Structured as a clean single-screen application with modular components.
+- **State Management**: Optimized React Hooks for predictable UI state.
+- **Image Handling**: react-native-image-picker for seamless gallery access.
+- **Location**: @react-native-community/geolocation for precise GPS data.
+
+---
+
+## 📂 Project Structure
+```text
+src/
+├── components/          # Modular, reusable UI elements
+│   ├── ImageEditor.tsx  # Core engine (Skia Canvas + Filters)
+│   ├── LocationCard.tsx # Location data and geocoding logic
+│   └── ...
+├── hooks/               # Custom hooks (e.g., locationHook.ts)
+├── theme/               # Design tokens (Colors, Typography, Spacing)
+└── utils/               # Helper functions and business logic
 ```
 
-## Step 2: Start your Application
+---
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## ⚙️ Installation & Setup
 
-### For Android
+### Prerequisites
+- Node.js (>= 18)
+- Xcode (for iOS) or Android Studio (for Android)
+- CocoaPods (`sudo gem install cocoapods`)
 
-```bash
-# using npm
-npm run android
+### Steps
+1. **Clone and Install**
+   ```bash
+   npm install
+   ```
 
-# OR using Yarn
-yarn android
-```
+2. **Setup iOS Native Modules**
+   ```bash
+   cd ios && pod install && cd ..
+   ```
 
-### For iOS
+3. **Start the Development Server**
+   ```bash
+   npx react-native start --reset-cache
+   ```
 
-```bash
-# using npm
-npm run ios
+4. **Run on Emulator/Device**
+   ```bash
+   npx react-native run-ios   # For iOS
+   npx react-native run-android # For Android
+   ```
 
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Developed with  by Mohamed Akmal

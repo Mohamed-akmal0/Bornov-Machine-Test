@@ -15,13 +15,6 @@ const Header: React.FC = () => {
           <Text style={styles.subtitle}>High-Performance Native Engine</Text>
         </View>
       </View>
-      <View style={styles.statusBar}>
-        <View style={styles.statusDot} />
-        <Text style={styles.statusText}>Native Bridge Active</Text>
-        <View style={styles.statusBadge}>
-          <Text style={styles.statusBadgeText}>v1.0</Text>
-        </View>
-      </View>
     </View>
   );
 };
@@ -75,44 +68,6 @@ const styles = StyleSheet.create({
   subtitle: {
     ...Typography.caption,
     marginTop: 2,
-  },
-  statusBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: Colors.cardBackground,
-    paddingHorizontal: Spacing.md,
-    paddingVertical: Spacing.sm,
-    borderRadius: Spacing.radiusRound,
-    borderWidth: 1,
-    borderColor: Colors.border,
-  },
-  statusDot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: Colors.success,
-    marginRight: Spacing.sm,
-    shadowColor: Colors.success,
-    shadowOffset: {width: 0, height: 0},
-    shadowOpacity: 0.6,
-    shadowRadius: 4,
-    elevation: 2,
-  },
-  statusText: {
-    ...Typography.caption,
-    color: Colors.textSecondary,
-    flex: 1,
-  },
-  statusBadge: {
-    backgroundColor: Colors.surfaceElevated,
-    paddingHorizontal: Spacing.sm,
-    paddingVertical: 3,
-    borderRadius: Spacing.radiusSm,
-  },
-  statusBadgeText: {
-    ...Typography.label,
-    fontSize: 10,
-    color: Colors.primary,
   },
 });
 
